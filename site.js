@@ -39,7 +39,64 @@ const vue_app = Vue.createApp({
       }
     },
       methods: {
-            /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
+            getMonthText(dataArry){
+                  switch(dataArray[1]){
+        
+                    case 1:
+                        return "January " + dataArry[2] + ", " + dataArray[0];
+                    break;
+                    case 2:
+                        return "February " + dataArry[2] + ", " + dataArray[0];
+                    break;
+                    case 3:
+                        return "March " + dataArry[2] + ", " + dataArray[0];
+                    break;
+                    case 4:
+                        return "April " + dataArry[2] + ", " + dataArray[0];
+                    break;
+                    case 5:
+                        return "May " + dataArry[2] + ", " + dataArray[0];
+                    break;
+                    case 6:
+                        return "June " + dataArry[2] + ", " + dataArray[0];
+                    break;
+                    case 7:
+                        return "July " + dataArry[2] + ", " + dataArray[0];
+                    break;
+                    case 8:
+                        return "August " + dataArry[2] + ", " + dataArray[0];
+                    break;
+                    case 9:
+                        return "September " + dataArry[2] + ", " + dataArray[0];
+                    break;
+                    case 10:
+                        return "October " + dataArry[2] + ", " + dataArray[0];
+                    break;
+                    case 11:
+                        return "November " + dataArry[2] + ", " + dataArray[0];
+                    break;
+                    case 12:
+                        return "December " + dataArry[2] + ", " + dataArray[0];
+                    break;
+                    default:
+                        return "ERROR DATE NOT REAL";
+                  }  
+                },
+                posterClick(index){
+                  let x = movies[index].posters.length();
+                  let y = movies[index].posterIndex;
+                  if(y < x){
+                        this.posterIndex++;
+                  } 
+                  else {
+                        this.posterIndex = 0;
+                  }
+                },
+                timeText(minutes){
+                  let hour = Math.trunc(minutes / 60);
+                  let min = minutes % 60
+                  return hour + "h " + min + "m";
+                }
       }
 })
 
