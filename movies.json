@@ -68,5 +68,47 @@
             "likes": 812,
             "dislikes": 101,
             "posterindex": 0
+      },
+      {
+            "title": "Redline",
+            "iscore": 7.5,
+            "rating": "Not Rated",
+            "runtime": 102,
+            "released": [2011, 12, 2],
+            "country": "Japan",
+            "posters": ["img/redline1.jpg", "img/redline2.png"],
+            "imdb": "https://www.imdb.com/title/tt1483797/?ref_=tt_mv_close",
+            "website": "https://en.wikipedia.org/wiki/Redline_(2009_film)",
+            "likes": 420,
+            "dislikes": 69,
+            "posterindex": 0
+      },
+      {
+            "title": "Rocky",
+            "iscore": 8.1,
+            "rating": "PG",
+            "runtime": 120,
+            "released": [1976, 12, 3],
+            "country": "USA",
+            "posters": ["img/rocky1.jpg", "img/rocky2.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0075148/?ref_=tt_mv_close",
+            "website": "https://en.wikipedia.org/wiki/Rocky",
+            "likes": 666,
+            "dislikes": 21,
+            "posterindex": 0
+      },
+      {
+            "title": "Blade Runner 2049",
+            "iscore": 8.0,
+            "rating": "R",
+            "runtime": 166,
+            "released": [2017, 10, 6],
+            "country": "USA",
+            "posters": ["img/bladerunner1.jpg", "img/bladerunner2.jpg", "img/bladerunner3.jpg"],
+            "imdb": "https://www.imdb.com/title/tt1856101/?ref_=nv_sr_srsg_0",
+            "website": "https://en.wikipedia.org/wiki/Blade_Runner",
+            "likes":696,
+            "dislikes": 21,
+            "posterindex": 0
       }
 ]
