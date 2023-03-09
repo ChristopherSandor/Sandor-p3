@@ -1,70 +1,389 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+  
+<link rel="icon" type="image/x-icon" href="img/icons/csIcon.png">
+<!-- Adobe Fonts -->
+<link rel="stylesheet" href="https://use.typekit.net/afp3glk.css">
+<link rel="stylesheet" href="https://use.typekit.net/afp3glk.css">
+<link rel="stylesheet" href="https://use.typekit.net/afp3glk.css">
+  <style>
+  @import url("https://use.typekit.net/afp3glk.css");
+</style>
 
-	<title>IS219 Gallery (Project 3)</title>
+<!-- BootStrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-	<!-- Our CSS File along with Boostrap, and Bootstrap Icon Styles-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-	<link rel="stylesheet" type='text/css' href="style.css"/>
-	  
-	<!-- DO NOT CHANGE ANYTHING ABOVE THIS LINE-->
+<!-- BootStrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
-	<script src="https://unpkg.com/vue@3.0.2"></script>
+<!--  W3 Schools -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+<!-- main CSS link -->
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="https://use.typekit.net/afp3glk.css">
+<!-- structure CSS link -->
+<link rel="stylesheet" href="css/structure.css">
+<!-- Style CSS link -->
+<link rel="stylesheet" href="css/style.css">
+
+
+<!-- Google Fonts Link -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BioRhyme&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
+<body class="noScroll">
 
-  <body>
-	<div id="vue_app" class="container">
+<!--  JavaScript -->
+<script src="js/main.js"></script>
+  
+<!-- Opening Intro -->
 
-	    <div class="header">
 
-	      <div class="container">
-	        <h1 id="app_title"> {{title}} </h1>
-	      </div>
+  <!-- Nav Bar -->
+  
+    <ul class="nav justify-content-center navbarProp ">
+      <li class="nav-item ms-auto my-auto">
+      <h1 class="navbarButton">Christopher Sandor</h1>
+      </li>
 
-	    </div>
+      <!-- Button Drop Down -->
+      <li class="rightNavButton my-auto ms-auto">
+        <nav class="navbar navbar-dark">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="bi bi-list"></i>
+            </button>
+          </div>
+        </nav>
 
-	    <div class="main">
+      </li>
+    </ul>
 
-	      <div class="row">
+  <!-- Top NAV Bar End -->
 
-	        <div class="col-md-6" v-for="(movie, index) in movies">
-	            <div class="thumbnail">
+ <!-- Bottom Wrapper -->
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg p-4 darky">
+        
+        <!-- Bottom Nav Bar -->
+        <div class="secondNav">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active secondNavTxt" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active secondNavTxt" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active secondNavTxt" href="works.html">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active secondNavTxt" href="qualifcations.html">Qualifcations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active secondNavTxt" href="#contactTAG">Contact</a>
+            </li>
+          </ul>
+          </div>
+      </div>
+    </div>
+  
 
-						<img class="poster img-fluid" v-bind:src="movie.posters[movie.posterindex]" @click="posterClick(index)"/>
-						<div class="imageInfo"> {{movies[index].posterindex + 1}} </div>
-						<p class="title"> {{movies[index].title}} ({{movies[index].country}})</p>
-						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{movies[index].iscore}} </p>
-						<p class="runtime">Runtime: {{timeText(movies[index].runtime)}} </p>
-						<p class="released">Released: {{getMonthText(movies[index].released)}} | Rated: {{movies[index].rating}}</p>
-						<p class="websites">Websites: <a v-bind:href="movies[index].imdb"> IMDB </a> | <a v-bind:href="movies[index].website"> Offical </a></p>
+  <!-- Opening Container -->
+  <div class="container-fluid openingScreenBackGround1">
 
-			            <div class="social">
-			              <p class="likes" @click="movies[index].likes++" ><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{movies[index].likes}} </p>
-			              <p class="dislikes" @click="movies[index].dislikes++"><i class="bi bi-hand-thumbs-down"></i> {{movies[index].dislikes}}</p>
-			            </div>
-	            </div>
-	        </div>
+    
+  <div class="row openingHome">
+    <!-- mt-auto -->
+<div id="outside"class="col border-right-img my-auto">
 
-	      </div>
-	    </div>
+<h1 id="inside" class="frontText openingText">
+  <a class="typewrite openingText" data-period="2500" data-type='[ "Web Designer", "Web Developer", "I.T Manager", "Programmer", "Graphic Designer", "Photographer" ]'>
+    <span class="wrap my-auto"></span>
+  </a>
+</h1>
 
-	    <div class="footer">
-	      <div class="container">
-			<a id="github" class="btn btn-lg btn-warning" v-bind:href="github">
-				<i class="bi bi-github me-2"></i> 
-				{{owner}}
-	  		</a>
-	      </div>
-	    </div>
-	</div>
+  
+</div>
+<div class="col-1 imgDiv justify-content-center">
+<img class="mainIMG" src="img/cj/cutout.png" alt="Picture of Christopher Sandor">
+</div>
+<div class="col-1"></div>
+  </div>
 
-	  	<!-- This load the Vue.js code -->
-		  <script type="text/javascript" src="site.js"></script>
+</div>
+<div class="container-fluid homePhotos">
+<!--  -->
 
+  <div class="fillertwo"></div>
+  
+<!--   -->
+  
+<div class="row fillerfour">
+  <div class="col justify-content-center">
+<h1 class="iconsHeadingText">Qualifcations</h1>
+  </div>
+</div>
+<!--  -->
+
+  <div class="fillerthree"></div>
+  
+<!--  -->
+  
+<div class="row homeIconRow">
+<div class="col"></div>
+<div class="col justify-content-center iconWrap" data-aos="zoom-in" data-aos-easing="ease-in-sine">
+<a href="qualifcations.html#htmlTAG">
+<img class="homeIcon iconWrapper" src="img/icons/html.png" alt="HTML Logo">
+</a>
+</div>
+<div class="col justify-content-center iconWrap" data-aos="zoom-in" data-aos-easing="ease-in-sine">
+  <a href="qualifcations.html#cssTAG">
+<img class="homeIcon iconWrapper" src="img/icons/css.png" alt="CSS Logo">
+</a>
+</div>
+<div class="col justify-content-center iconWrap" data-aos="zoom-in" data-aos-easing="ease-in-sine">
+  <a href="qualifcations.html#sassTAG">
+<img class="homeIcon iconWrapper" src="img/icons/sass.png" alt="Sass Logo">
+</a>
+</div>
+<div class="col justify-content-center iconWrap" data-aos="zoom-in" data-aos-easing="ease-in-sine"  data-aos-mirror="true">
+  <a href="qualifcations.html#jsTAG">
+<img class="homeIcon iconWrapper" src="img/icons/js.png" alt="JavaScript Logo">
+</a>
+</div>
+<div class="col"></div>
+</div>
+
+<!--  -->
+
+<!--  -->
+  
+<div class="row homeIconRow">
+<div class="col"></div>
+<div class="col justify-content-center iconWrap" data-aos="zoom-in" data-aos-easing="ease-in-sine"  data-aos-mirror="true">
+  <a href="qualifcations.html#javaTAG">
+<img class="homeIcon iconWrapper" src="img/icons/java.png"  alt="Java Logo">
+</a>
+</div>
+<div class="col justify-content-center iconWrap" data-aos="zoom-in" data-aos-easing="ease-in-sine"  data-aos-mirror="true">
+  <a href="qualifcations.html#psTAG">
+<img class="homeIcon iconWrapper" src="img/icons/Ps.png" alt="Photoshop Logo">
+</a>
+</div>
+<div class="col justify-content-center iconWrap" data-aos="zoom-in" data-aos-easing="ease-in-sine"  data-aos-mirror="true">
+  <a href="qualifcations.html#vbaTAG">
+<img class="homeIcon iconWrapper" src="img/icons/vba.png" alt="Microsoft VBA Logo">
+</a>
+</div>
+<div class="col justify-content-center iconWrap" data-aos="zoom-in" data-aos-easing="ease-in-sine"  data-aos-mirror="true">
+  <a href="qualifcations.html#lightroomTAG">
+<img class="homeIcon iconWrapper" src="img/icons/lightroom.png" alt="Adobe Lightroom Logo">
+</a>
+</div>
+<div class="col"></div>
+</div>
+
+<div class="fillerone"></div>
+
+<div class="row bottomTextKeepUp">
+<div class="col"></div>
+<div class="col">
+<a href="qualifcations.html">
+  <h1 class="bottomText">Learn more</h1>
+</a>
+</div>
+  <div class="col"></div>
+</div>
+<div class="row bottomTextKeepUp"></div>
+
+</div>
+
+<!--  -->
+
+<div class="container-fluid workExpBody">
+<div class="fillertwo"></div>
+  
+<div class="row fillerfour">
+  <div class="col justify-content-center">
+<h1 class="workExpHeadingText">Work Experience</h1>
+  </div>
+</div>
+  <div class="fillerone"></div>
+
+  <div class="fillerhalf row">
+<div class="col-1"></div>
+<div class="col vertLine"></div>
+<div class="col-1"></div>
+  </div>
+  <div class="fillertwo"></div>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-2">
+      <a href="https://www.medi-solutions.org/home/home">
+      <img class="companyLogo1" src="img/icons/medi-logo.png"  alt="Java Logo">
+      </a>
+    </div>
+<div class="col">
+  <a href="https://www.medi-solutions.org/home/home">
+  <h1 id="textRef2"class="workNameTitle">Medi-Solutions Insurance Agency</h1> 
+  </a>
+</div>
+  <div class="col-2"></div>
+    </div>
+  <div class="row">
+    <div class="col-2"></div>
+<div class="col">
+  <h1 class="workNameTitle2">I.T Manager (July 2021 - Present)</h1> 
+</div>
+  <div class="col-2"></div>
+    
+</div>
+<div class="fillertwo"></div>
+  <div class="row">
+    <div class="col-2"></div>
+<div class="col">
+  <h1 class="workbodyText">
+I started working at Medi-Solutions Insurance Agency, LLC in July of 2021 and worked I.T Manager. My responsibilities involve managing our database containing thousands of insurance agents' information. Daily, I would be required to upload, import, and pay out individual statements for the agents using the VBA language to speed up this process. <a id="textRef1" href="qualifcations.html#vbaTAG">Visual Basic Analysis</a>, or VBA, is a computer language used in Microsoft Excel to speed up tasks and elevate what excel can do. Then I would have to manage our Online Portal, located on our website, for the agents to view their statements on statuses and policies. I would also help my fellow employees with their computers, many needing to be replaced. Generally, I helped with anything having to do with IT work for that particular agency.
+  </h1> 
+</div>
+  <div class="col-2"></div>
+    </div>
+
+</div>
+
+<!-- Contact Page Start -->
+<div class="container-fluid contactBody">
+
+<div class="row">
+<div class="col-2"></div>
+
+<div class="col-8">
+
+
+
+<!-- Filler Top -->
+<div class="fillerone"></div>
+
+<!-- Header Row -->
+<div id="contactTAG"class="row">
+<h1 class="contactTitle">Contact Information</h1>
+
+</div>
+
+<!-- Filler Gap -->
+<div class="fillertwo"></div>
+
+<!-- Content Row -->
+<div class="row">
+
+<!-- Email information -->
+<div class="col-7">
+
+
+<!-- Email Title -->
+<div class="row">
+  <h1 class="emailTitle">Email Address:</h1>
+</div>
+
+<!-- Email Address -->
+<div class="row">
+<a href="mailto:chrisjsandor@gmail.com">
+  <h1 class="emailAddress">chrisjsandor@gmail.com</h1>
+</a>
+</div>
+
+
+</div>
+<!-- End of Email Information -->
+
+
+<!-- Social IMG Row -->
+<div class="col-5">
+<div class="row WrapperIcon">
+
+  <div class="col justify-content-center iconWrap">
+    <a href="https://www.instagram.com/sjic_14/" target="_blank">
+  <img id="leftsocial"  class="contactSocial" src="img/icons/instagram.png"  alt="instagram Logo">
+  </a>
+  </div>
+
+  <div class="col justify-content-center iconWrap">
+    <a href="https://github.com/123csandor" target="_blank">
+  <img class="contactSocial" src="img/icons/github.png"  alt="github Logo">
+  </a>
+  </div>
+
+
+
+</div>
+</div>
+
+
+</div>
+<!-- End of Content Row -->
+
+<!-- Filler Bottom -->
+<div class="fillertwo"></div>
+
+<div class="col-2"></div>
+</div>
+</div>
+
+
+
+</div>
+<!-- End of Contact -->
+
+
+<!-- FOOTER -->
+
+<div class="row footer">
+
+<div class="fillerone"></div>
+<div class="row footerOptionList">
+
+<p class="footerOption">
+<a href="index.html" class="footerOptionText">Home</a>
+<a href="about.html" class="footerOptionText">About</a>
+<a href="works.html" class="footerOptionText">Works</a>
+<a href="qualifcations.html" class="footerOptionText">Qualifcations</a>
+</p>
+
+
+</div>
+
+<div class="fillerone"></div>
+</div>
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+</script>
+
+  
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
+  
 </body>
 </html>

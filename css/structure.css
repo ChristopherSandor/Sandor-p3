@@ -1,0 +1,75 @@
+.row{
+  --bs-gutter-x: 0rem!important;
+}
+.row.footer{
+align-content: flex-start;
+text-align: center;
+}
+.fillerhalf{
+  height: 5px;
+}
+.fillerone{
+  height: max(2vh, 20px);
+}
+.fillertwo{
+  height: 5vw;
+}
+.fillerthree{
+  height: 7vw;
+}
+.fillerfour{
+  height: 10vw;
+}
+.openingHome{
+  height: max(41.5vw, 500px);
+}
+.border-right-img{
+width: max(35vw, 230px);
+z-index: 5;
+}
+.homeIcon{
+  height: max(8.25vw, 75px);
+  width: max(8.25vw, 75px);
+  display: block;
+  margin: auto; 
+  padding: 10px;
+    transition: 0.3s;
+}
+.homeIcon:hover{
+  height: max(9vw, 80px);
+  width: max(9vw, 80px);
+  padding: 5px;
+}
+
+.homeIconRow{
+ height: max(13vw, 80px);
+}
+
+.colIcons{
+   width: max(14vw, 170px);
+}
+.iconWrap{
+  padding: 10px;
+}
+.titleWrappers{
+  float: right;
+}
+.socialIcon{
+  height: max(4vw, 55px);
+  width: max(4vw, 55px);
+  display: block;
+  margin: auto; 
+  padding: 10px;
+    transition: 0.3s;
+}
+.socialIcon:hover{
+  height: max(4.5vw, 65px);
+  width: max(4.5vw, 65px);
+  padding: 5px;
+}
+#leftSocial{
+  float: right;
+}
+#rightSocial{
+  float: left;
+}

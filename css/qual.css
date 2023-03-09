@@ -1,0 +1,59 @@
+.qualBody {
+  height: max(250vw, 1700px);
+}
+
+.cardBody {
+  height: max(25vw, 175px);
+  background-color: #111111;
+  border-radius: 15px;
+}
+
+.cardHeaderTxtWrapper {
+  height: max(10vw, 50px);
+}
+
+.cardHeaderTxt {
+  font-family: acier-bat-solid, sans-serif;
+  font-size: max(4vw, 35px);
+  color: #c9c9c9;
+  padding-top: 1vw;
+}
+
+.cardBodyTxtWrapper {
+  height: max(15vw, 75px);
+}
+
+.cardBodyTxt {
+  font-family: depot-new-web, sans-serif;
+  font-size: max(1.5vw, 13px);
+  color: #c9c9c9;
+  padding-right: 1vw;
+}
+
+.cardIcon {
+  height: max(10vw, 50px);
+  width: max(10vw, 50px);
+  vertical-align: middle !important;
+  transition: 0.3s;
+}
+
+.cardIcon:hover {
+  height: max(11vw, 57px);
+  width: max(11vw, 57px);
+}
+
+.customFill {
+  height: max(7.5vw, 60px);
+}
+
+.worksHeader {
+  font-weight: 300;
+  font-family: acier-bat-gris, sans-serif;
+  color: #111111;
+  font-size: 5vw;
+}
+
+.worksHeaderWrapper {
+  text-align: center;
+  font-style: normal;
+}/*# sourceMappingURL=qual.css.map */

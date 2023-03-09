@@ -1,0 +1,44 @@
+.bigBody{
+  height: max(100vw, 1100px);;
+  --bs-gutter-x: 0rem!important;
+}
+.headerAbout{
+  text-align: center;
+  font-style: normal;
+}
+.headerAboutTxt{
+  font-weight: 300;
+font-family: acier-bat-gris, sans-serif;
+  color: #f5f5f5;
+  font-size: max(6.5vw, 55px);
+  text-align: center;
+}
+#headerRightAboutTxt{
+  color: #111111;
+}
+.aboutPhoto{
+  width: max(20vw, 180px);
+  border-style: solid;
+  border-color: #111111;
+  border-width: 10px;
+  margin: 15px;
+  border-radius: 7px;
+}
+.aboutTxt{
+font-size: max(2vw, 16px);
+font-family: depot-new-web, sans-serif; 
+font-style: normal;
+font-weight: 300;
+color: #d4d4d4;
+}
+.aboutBody{
+  background-color: rgba(17, 17, 17, 1);
+  border-radius: 12px;
+}
+.aboutBodyWrapper{
+  height: max(50vw, 650px);
+  border-color: #f5f5f5;
+}
+.bottomIMGWrapper{
+  height: max(30vw, 300px);
+}
